@@ -2,6 +2,9 @@
 
 *most of the offset are for EU rom*
 
+Shortcoming :
+- The evolution is decided by just increasing the specie id. IF you need to apply this evolution to any species, you need to checked the target species from the data, maybe choose an appropriate one, and check that there is one in the first place.
+
 I needed to command evolution when I wanted.
 
 The code performing an evolution from the evolution sprint (or whatever is the name I don't remember) is located at ``0x0238ac80``. I called it ``evolve_menu``. It seems to be a state based function, using some global to store it's state. I wont use those global, and instead reproduce how it work. The code that evolve the selected pokemon by itself start at offset ``0x0238b618``
